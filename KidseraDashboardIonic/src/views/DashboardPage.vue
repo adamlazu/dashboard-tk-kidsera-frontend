@@ -1,0 +1,280 @@
+<template>
+    <ion-page>
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <ion-menu-button color="primary"></ion-menu-button>
+                </ion-buttons>
+                <ion-grid>
+                    <ion-row class="ion-justify-content-between">
+                        <ion-col size="3">
+                            <ion-title class="d-none d-xl-inline-block" size="small"><span
+                                    style="opacity: 50%;">Pages</span> / Dashboard <br> <span
+                                    style="font-size: 18px; letter-spacing: 5px;">Dashboard</span>
+                            </ion-title>
+                        </ion-col>
+                        <ion-col size-sm="9" size="10">
+                            <ion-row class="ion-align-items-center ion-justify-content-end goright" style="margin-right: 20px;">
+                                <ion-searchbar color="dark" class="d-none d-sm-inline-block" placeholder="Type Here..." ></ion-searchbar>
+                                <a href="/SignUp">
+                                    <ion-icon src="assets/icon/home.svg"></ion-icon><span class="d-none d-sm-inline-block text-dark">&nbsp;Sign in</span> 
+                                </a>
+                                <a href="">
+                                    <ion-icon src="assets/icon/settings-sharp.svg"> </ion-icon>
+                                </a>
+                                <a href="">
+                                    <ion-icon src="assets/icon/notifications.svg"> </ion-icon>
+                                </a>
+                            </ion-row>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-toolbar>
+
+        <ion-content :fullscreen="true">
+            <ion-grid>
+                <ion-row>
+                    <ion-col class="col-xl-3 col-sm-6 mb-xl-0 mb-4 p-0" size = 12 size-sm="6" size-xl="3">
+                        <ion-card class="card-info">
+                            <ion-row class="ion-align-items-center m-0">
+                                    <ion-col size="8">
+                                        <ion-card-header>
+                                            <ion-card-subtitle class="text-sm mb-0 text-capitalize font-weight-bold overflow-hidden text-overflow">
+                                                Jumlah TK A</ion-card-subtitle>
+                                            <ion-card-title class="font-weight-bolder mb-0">30</ion-card-title>
+                                        </ion-card-header>
+                                    </ion-col>
+                                    <ion-col size="4" class="text-end text-sm-center">
+                                        <ion-icon src="assets/icon/home.svg" style="font-size: large; margin-right: 20px"></ion-icon>
+                                    </ion-col>
+                                </ion-row>
+                        </ion-card>
+                    </ion-col>
+                    <ion-col class="col-xl-3 col-sm-6 mb-xl-0 mb-4 p-0" size = 12 size-sm="6" size-xl="3">
+                        <ion-card class="card-info">
+                            <ion-row class="ion-align-items-center ">
+                                <ion-col size="8">
+                                    <ion-card-header>
+                                        <ion-card-subtitle class="text-sm mb-0 text-capitalize font-weight-bold overflow-hidden text-overflow">Jumlah TK B</ion-card-subtitle>
+                                        <ion-card-title>20</ion-card-title>
+                                    </ion-card-header>
+                                </ion-col>
+                                <ion-col size="4" class="text-end text-sm-center">
+                                    <ion-icon src="assets/icon/home.svg" style="font-size: large; margin-right: 20px"></ion-icon>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card>
+                    </ion-col>
+                    <ion-col class="col-xl-3 col-sm-6 mb-xl-0 mb-4 p-0" size = 12 size-sm="6" size-xl="3">
+                        <ion-card class="card-info">
+                            <ion-row class="ion-align-items-center ">
+                                <ion-col size="8">
+                                    <ion-card-header>
+                                        <ion-card-subtitle class="text-sm mb-0 text-capitalize font-weight-bold overflow-hidden text-overflow">Jumlah Siswa Laki-laki</ion-card-subtitle>
+                                        <ion-card-title>20</ion-card-title>
+                                    </ion-card-header>
+                                </ion-col>
+                                <ion-col size="4" class="text-end text-sm-center">
+                                    <ion-icon src="assets/icon/home.svg" style="font-size: large; margin-right: 20px"></ion-icon>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card>
+                    </ion-col>
+                    <ion-col class="col-xl-3 col-sm-6 mb-xl-0 mb-4 p-0" size = 12 size-sm="6" size-xl="3">
+                        <ion-card class="card-info">
+                            <ion-row class="ion-align-items-center ">
+                                <ion-col size="8">
+                                    <ion-card-header>
+                                        <ion-card-subtitle class="text-sm mb-0 text-capitalize font-weight-bold overflow-hidden text-overflow">Jumlah Siswa Perempuan</ion-card-subtitle>
+                                        <ion-card-title>30</ion-card-title>
+                                    </ion-card-header>
+                                </ion-col>
+                                <ion-col size="4" class="text-end text-sm-center">
+                                    <ion-icon src="assets/icon/home.svg" style="font-size: large; margin-right: 20px;"></ion-icon>
+                                </ion-col>
+                            </ion-row>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-card class="w-100" style="box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.05);">
+                        <ion-row class="ion-align-items-center ">
+                            <ion-col>
+                                <ion-card-header>
+                                    <ion-grid>
+                                        <ion-row>
+                                            <h3>KIDSERA</h3>
+                                        </ion-row>
+                                        <ion-row class="mt-4">
+                                            <ion-col>
+                                                <ion-row>
+                                                    <ion-col style="line-height: 2.5;" class="text-dark form">
+                                                        NPSN :
+                                                        <br>
+                                                        Bentuk Pendidikan :
+                                                        <br>
+                                                        Status :
+                                                        <br>
+                                                        Kecamatan :
+                                                        <br>
+                                                        Kabupaten :
+                                                        <br>
+                                                        Provinsi :
+                                                        <br>
+                                                        Kepala Sekolah :
+                                                        <br>
+                                                        Operator :
+                                                        <br>
+                                                        Username :
+                                                        <br><br>
+                                                        Implementasi Kurikulum :
+                                                        <br>
+                                                        Bersedia menerima BOP :
+                                                        <br>
+                                                        Bendahara BOP :
+                                                    </ion-col>
+                                                    <ion-col style="line-height: 2.5;" class="text-dark fw-bold form">
+                                                        70011681
+                                                        <br>
+                                                        TK
+                                                        <br>
+                                                        Swasta
+                                                        <br>
+                                                        Kec. Pulo Gadung
+                                                        <br>
+                                                        Kota Jakarta Timur
+                                                        <br>
+                                                        Prov. D.K.I. Jakarta
+                                                        <br>
+                                                        NILA DWI OKVITA
+                                                        <br>
+                                                        Anugrah Amelia Maharani
+                                                        <br>
+                                                        kidsera.official@gmail.com
+                                                        <br><br>
+                                                        2013
+                                                        <br>
+                                                        Ya
+                                                        <br>
+                                                        Sylvia Trywardani
+                                                    </ion-col>
+                                                </ion-row>
+                                            </ion-col>
+                                            <ion-col class="d-none d-xl-block">
+                                                <ion-img src="assets/img/kidsera-img.svg">
+
+                                                </ion-img>
+                                            </ion-col>
+                                        </ion-row>
+                                    </ion-grid>
+                                </ion-card-header>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+    </ion-page>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonCol, IonGrid, IonRow } from '@ionic/vue';
+
+export default defineComponent({
+    name: 'DashboardPage',
+    components: {
+        IonButtons,
+        IonContent,
+        // IonHeader,
+        IonMenuButton,
+        IonPage,
+        IonTitle,
+        IonToolbar,
+        IonCol,
+        IonGrid,
+        IonRow
+    }
+});
+</script>
+
+<style scoped>
+ion-col{
+    padding: 0;
+}
+#container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#container strong {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
+}
+
+#container a {
+    text-decoration: none;
+}
+
+ion-searchbar {
+    --border-radius: 12px;
+    width: 40%;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.text-overflow{
+    white-space: nowrap;
+}
+
+.tab1 {
+    tab-size: 1;
+}
+
+/* pre{
+    font-size: 18px;
+} */
+.card-info{
+    max-height: 120px;
+    border-radius: 20px;
+    box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.05);
+}
+
+ion-icon{
+    color: black;
+}
+
+ion-card-title,
+ion-card-subtitle {
+    color: black;
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 425px) {
+    .form {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 575px){
+    .goright {
+            position: relative;
+            left: 60px
+        }
+}
+</style>
