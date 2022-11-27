@@ -22,10 +22,10 @@ const routes: Array<RouteRecordRaw> = [
     path: "/pages/PesertaDidik",
     component: () => import("../views/PesertaDidikPage.vue"),
   },
-  // {
-  //   path: "/pages/TenagaPendidikan",
-  //   component: () => import("../views/TenagaPendidikanPage.vue"),
-  // },
+  {
+    path: "/pages/TenagaKependidikan",
+    component: () => import("../views/TenagaKependidikanPage.vue"),
+  },
   {
     path: "/pages/:id",
     component: () => import("../views/Pages.vue"),
