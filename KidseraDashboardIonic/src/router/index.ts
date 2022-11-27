@@ -6,10 +6,10 @@ const routes: Array<RouteRecordRaw> = [
     path: "",
     redirect: "/pages/Dashboard",
   },
-  // {
-  //   path: "/SignUp",
-  //   component: () => import("../views/SignUp.vue"),
-  // },
+  {
+    path: "/SignUp",
+    component: () => import("../views/SignUp.vue"),
+  },
   // {
   //   path: "/SignIn",
   //   component: () => import("../views/SignIn.vue"),
