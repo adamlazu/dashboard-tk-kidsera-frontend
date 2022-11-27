@@ -1,0 +1,7 @@
+{
+  "name": "KidseraDashboard",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
