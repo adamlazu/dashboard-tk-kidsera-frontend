@@ -18,9 +18,13 @@ const routes: Array<RouteRecordRaw> = [
     path: "/pages/Dashboard",
     component: () => import("../views/DashboardPage.vue"),
   },
+  {
+    path: "/pages/PesertaDidik",
+    component: () => import("../views/PesertaDidikPage.vue"),
+  },
   // {
-  //   path: "/pages/PesertaDidik",
-  //   component: () => import("../views/PesertaDidikPage.vue"),
+  //   path: "/pages/TenagaPendidikan",
+  //   component: () => import("../views/TenagaPendidikanPage.vue"),
   // },
   {
     path: "/pages/:id",

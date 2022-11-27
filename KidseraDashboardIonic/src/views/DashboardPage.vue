@@ -7,22 +7,25 @@
                 <ion-grid>
                     <ion-row class="ion-justify-content-between">
                         <ion-col size="3">
-                            <ion-title class="d-none d-xl-inline-block" size="small"><span
+                            <ion-title class="d-none d-lg-inline-block" size="small"><span
                                     style="opacity: 50%;">Pages</span> / Dashboard <br> <span
                                     style="font-size: 18px; letter-spacing: 5px;">Dashboard</span>
                             </ion-title>
                         </ion-col>
                         <ion-col size-sm="9" size="10">
-                            <ion-row class="ion-align-items-center ion-justify-content-end goright" style="margin-right: 20px;">
-                                <ion-searchbar color="dark" class="d-none d-sm-inline-block" placeholder="Type Here..." ></ion-searchbar>
+                            <ion-row class="ion-align-items-center ion-justify-content-end goright mt-2" style="margin-right: 20px;">
+                                <div class="search-box">
+                                    <button class="btn-search"><i class="fas fa-search"></i></button>
+                                    <input type="text" class="input-search" placeholder="Type to Search...">
+                                </div>
                                 <a href="/SignUp">
-                                    <ion-icon src="assets/icon/home.svg"></ion-icon><span class="d-none d-sm-inline-block text-dark">&nbsp;Sign in</span> 
+                                    <ion-icon class="iconButton" src="assets/icon/home.svg"></ion-icon><span class="d-none d-sm-inline-block text-dark">&nbsp;Sign in</span> 
                                 </a>
                                 <a href="">
-                                    <ion-icon src="assets/icon/settings-sharp.svg"> </ion-icon>
+                                    <ion-icon class="iconButton" src="assets/icon/settings-sharp.svg"> </ion-icon>
                                 </a>
                                 <a href="">
-                                    <ion-icon src="assets/icon/notifications.svg"> </ion-icon>
+                                    <ion-icon class="iconButton" src="assets/icon/notifications.svg"> </ion-icon>
                                 </a>
                             </ion-row>
                         </ion-col>
@@ -178,29 +181,32 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonCol, IonGrid, IonRow } from '@ionic/vue';
+import { IonButtons, IonContent, IonMenuButton, IonPage, IonTitle, IonToolbar, IonCol, IonGrid, IonRow } from '@ionic/vue';
 
 export default defineComponent({
     name: 'DashboardPage',
     components: {
         IonButtons,
         IonContent,
-        // IonHeader,
         IonMenuButton,
         IonPage,
         IonTitle,
         IonToolbar,
         IonCol,
         IonGrid,
-        IonRow
+        IonRow,
     }
 });
+
+
 </script>
 
 <style scoped>
+/* template and reset style */
 ion-col{
     padding: 0;
 }
+
 #container {
     text-align: center;
     position: absolute;
@@ -226,18 +232,78 @@ ion-col{
     text-decoration: none;
 }
 
-ion-searchbar {
-    --border-radius: 12px;
-    width: 40%;
-
-}
-
-a {
-    color: white;
+/* Icon navbar style */
+a .iconButton{
+    color: black;
     text-decoration: none;
     margin-left: 20px;
+    font-size: 18px;
 }
 
+/* Searchbar Style */
+.search-box {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    color: black;
+}
+
+.input-search {
+    height: 40px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+    padding-right: 40px;
+    color: black;
+}
+
+.input-search::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+.btn-search {
+    width: 40px;
+    height: 40px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color: black;
+    background-color: transparent;
+    pointer-events: painted;
+}
+
+.btn-search:focus~.input-search {
+    width: 500px;
+    border-radius: 10px;
+    background-color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.input-search:focus {
+    width: 500px;
+    border-radius: 10px;
+    background-color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+
+/* card style */
 .text-overflow{
     white-space: nowrap;
 }
@@ -246,9 +312,6 @@ a {
     tab-size: 1;
 }
 
-/* pre{
-    font-size: 18px;
-} */
 .card-info{
     max-height: 120px;
     border-radius: 20px;
@@ -265,16 +328,85 @@ ion-card-subtitle {
     font-size: 13px;
 }
 
-@media only screen and (max-width: 425px) {
-    .form {
-        font-size: 10px;
+/* small laptop dimension */
+@media only screen and (max-width: 1280px) {
+    .btn-search:focus~.input-search {
+        width: 250px;
+    }
+
+    .input-search:focus {
+        width: 250px;
     }
 }
 
-@media only screen and (max-width: 575px){
+/* tablet dimension */
+@media only screen and (max-width: 990px) {
+    .btn-search:focus~.input-search {
+        width: 280px;
+    }
+
+    .input-search:focus {
+        width: 280px;
+    }
+}
+
+/* large phone dimension */
+@media only screen and (max-width: 575px) {
     .goright {
-            position: relative;
-            left: 60px
+        position: relative;
+        left: 60px
+    }
+
+}
+
+/* large phone dimension */
+@media only screen and (max-width: 426px) {
+    .form {
+        font-size: 10px;
+    }
+
+    .search-box{
+        position: absolute;
+        right: 34%;
+    }
+
+    .btn-search:focus~.input-search {
+        width: 200px;
+    }
+
+    .input-search:focus {
+        width: 200px;
+    }
+}
+
+/* small phone dimension */
+@media only screen and (max-width: 376px) {
+    .search-box {
+            position: absolute;
+            right: 41%;
         }
+    
+        .btn-search:focus~.input-search {
+            width: 180px;
+        }
+    
+        .input-search:focus {
+            width: 180px;
+        }
+}
+
+@media only screen and (max-width: 320px) {
+    .search-box {
+        position: absolute;
+        right: 50%;
+    }
+
+    .btn-search:focus~.input-search {
+        width: 150px;
+    }
+
+    .input-search:focus {
+        width: 150px;
+    }
 }
 </style>
