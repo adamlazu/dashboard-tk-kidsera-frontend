@@ -66,7 +66,7 @@ export default defineComponent({
       },
       {
         title: 'Guru & Tenaga Kependidikan',
-        url: '/pages/TenagaPendidikan',
+        url: '/pages/TenagaKependidikan',
         iosIcon: heartOutline,
         mdIcon: heartSharp,
       },
