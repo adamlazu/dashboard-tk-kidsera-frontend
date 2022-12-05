@@ -27,6 +27,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../views/TenagaKependidikanPage.vue"),
   },
   {
+    path: "/pages/TenagaKependidikan/TambahTenagaKependidikan",
+    component: () => import("../views/TambahTenagaKependidikanPage.vue"),
+  },
+  {
+    path: "/pages/Sarpras",
+    component: () => import("../views/SarprasPage.vue"),
+  },
+  {
     path: "/pages/:id",
     component: () => import("../views/Pages.vue"),
   },
@@ -37,6 +45,10 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/pages/Sarpras/DetailSarpras/TambahFasilitasSarpras",
     component: () => import("../views/TambahFasilitasSarprasPage.vue"),
+  },
+  {
+    path: "/pages/Sarpras/DetailSarpras/EditSarpras",
+    component: () => import("../views/EditSarprasPage.vue"),
   },
 ];
   
