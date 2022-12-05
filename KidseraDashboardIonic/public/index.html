@@ -47,7 +47,18 @@
   function doSomethingForAddSarprasFasilitas() {
       alert("Data Berhasil Ditambahkan");
       window.location.href = "pages/Sarpras/DetailSarpras";
-    }
+  }
+  function doSomethingForEditSarprasFasilitas() {
+      const statement = confirm("Perubahan Akan Disimpan, Lanjutkan Perubahan?");
+      if (statement == true) {
+        alert("Data Berhasil Diubah");
+        window.location.href = "pages/Sarpras/DetailSarpras";
+      }
+      else {
+        alert("Data Tidak Berhasil Diubah");
+        window.location.href = "pages/Sarpras/DetailSarpras/EditSarpras";
+      }
+   }
 </script>
 
 </html>
