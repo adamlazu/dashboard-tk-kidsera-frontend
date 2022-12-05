@@ -30,6 +30,14 @@ const routes: Array<RouteRecordRaw> = [
     path: "/pages/:id",
     component: () => import("../views/Pages.vue"),
   },
+  {
+    path: "/pages/Sarpras/DetailSarpras",
+    component: () => import("../views/DetailSarprasPage.vue"),
+  },
+  {
+    path: "/pages/Sarpras/DetailSarpras/TambahFasilitasSarpras",
+    component: () => import("../views/TambahFasilitasSarprasPage.vue"),
+  },
 ];
   
 
