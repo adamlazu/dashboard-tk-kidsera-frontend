@@ -29,7 +29,7 @@ import { archiveOutline, archiveSharp, bookmarkOutline, bookmarkSharp, heartOutl
 export default defineComponent({
   name: 'App',
   data() {
-    if (window.location.pathname == '/SignUp') {
+    if (window.location.pathname == '/SignUp' || window.location.pathname == '/pages/SignIn') {
       return {
         disabledVariable: true,
       };
@@ -72,13 +72,13 @@ export default defineComponent({
       },
       {
         title: 'Sarana & Prasarana',
-        url: '/pages/Archived',
+        url: '/pages/Sarpras',
         iosIcon: archiveOutline,
         mdIcon: archiveSharp
       },
       {
         title: 'Rombongan Belajar',
-        url: '/pages/Trash',
+        url: '/pages/RombonganBelajar',
         iosIcon: trashOutline,
         mdIcon: trashSharp
       },
