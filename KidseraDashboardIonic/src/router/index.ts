@@ -50,6 +50,34 @@ const routes: Array<RouteRecordRaw> = [
     path: "/pages/Sarpras/DetailSarpras/EditSarpras",
     component: () => import("../views/EditSarprasPage.vue"),
   },
+  {
+    path: "/pages/sapras",
+    component: () => import("../views/SarprasPage.vue"),
+  },
+  {
+    path: "/pages/Sarpras/detail",
+    component: () => import("../views/DetailSarprasPage.vue"),
+  },
+  {
+    path: "/pages/Sarpras/TambahSarprasRuangan",
+    component: () => import("../views/TambahSarprasRuanganPage.vue"),
+  },
+  {
+    path: "/pages/rombonganbelajar",
+    component: () => import("../views/RombonganBelajarPage.vue"),
+  },
+  {
+    path: "/pages/rombonganbelajar/TambahRombonganBelajar",
+    component: () => import("../views/TambahRombonganBelajarPage.vue"),
+  },
+  {
+    path: "/pages/rombonganbelajar/TahunAjaranRombonganBelajar",
+    component: () => import("../views/TahunAjaranRombonganBelajarPage.vue"),
+  },
+  {
+    path: "/pages/rombonganbelajar/TahunAjaranRombonganBelajar/detail",
+    component: () => import("../views/DetailRombelPage.vue"),
+  },
 ];
   
 
